@@ -1,7 +1,7 @@
 BITS    16
 ORG     0x7c00
 jmp start
-
+; Sleepmod code
 start:
         call clear_screen
         mov ax,cs
