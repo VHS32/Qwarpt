@@ -37,6 +37,7 @@ clear_screen:
         int 0x10
         ret
 
+;Why creating unnecessary spaces
 msg:            db        "Connection Lost Reconnecting To Operating System *Windows 7*",0
 times 510 - ($-$$) db 0
 dw        0xaa55
