@@ -547,7 +547,7 @@ DWORD WINAPI payload13dot3(LPVOID lpParam) {
 
             if (rand() % 5 == 0) { DrawIcon(desk, x, y, LoadIcon(0, IDI_APPLICATION)); Sleep(0.99); }
 
-            if (rand() % 5 == 0) { DrawIcon(desk, x, y, LoadIcon(0, IDI_APPLICATION); Sleep(0.99); }
+            if (rand() % 5 == 0) { DrawIcon(desk, x, y, LoadIcon(0, IDI_APPLICATION)); Sleep(0.99); }
 
         }
 
@@ -753,7 +753,7 @@ VOID WINAPI sound9() {
     waveOutOpen(&hWaveOut, WAVE_MAPPER, &wfx, 0, 0, CALLBACK_NULL);
     char buffer[32000 * 20] = {};
     for (DWORD t = 0; t < sizeof(buffer); ++t)
-        buffer[t] = static_cast<char>((t >> 1)) ^ (1 & t) / like six
+        buffer[t] = static_cast<char>((t >> 1)) ^ (1 & t); // like six
 
     WAVEHDR header = { buffer, sizeof(buffer), 0, 0, 0, 0, 0, 0 };
     waveOutPrepareHeader(hWaveOut, &header, sizeof(WAVEHDR));
